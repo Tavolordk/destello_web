@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="La Aventura de Destello y la Tormenta Solar, cuento digital para leer en línea." />
+  <meta name="theme-color" content="#050509" />
+  <meta property="og:title" content="La Aventura de Destello y la Tormenta Solar" />
+  <meta property="og:description" content="Cuento digital para leer en línea." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/pages/page-01.webp" />
+  <title>La Aventura de Destello y la Tormenta Solar</title>
+  <link rel="preload" as="image" href="assets/pages/page-01.webp" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#lector">Saltar al cuento</a>
+
+  <header class="site-header" aria-label="Encabezado del sitio">
+    <nav class="navbar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand__mark">✦</span>
+        <span>Destello Digital</span>
+      </a>
+      <div class="nav-actions">
+        <a href="#lector">Leer</a>
+        <a href="#creditos">Créditos</a>
+        <a class="button button--small" href="assets/docs/Cuento-Destello-Digital.pdf" download>Descargar PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow">Cuento digital</p>
+        <h1 id="hero-title">La Aventura de <span>Destello</span> y la Tormenta Solar</h1>
+        <p class="hero__text">
+          Una experiencia web para que niñas, niños, familias y docentes puedan leer el cuento desde cualquier dispositivo.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#lector">Comenzar lectura</a>
+          <button class="button button--ghost" type="button" id="toggleViewTop">Ver como libro</button>
+        </div>
+      </div>
+      <figure class="cover-card">
+        <img src="assets/pages/page-01.webp" alt="Portada del cuento La Aventura de Destello y la Tormenta Solar" />
+      </figure>
+    </section>
+
+    <section class="intro-card" aria-label="Información del cuento">
+      <article>
+        <h2>Lectura pública y accesible</h2>
+        <p>
+          El cuento se presenta en páginas grandes, con controles sencillos, navegación por teclado y opción de lectura continua.
+        </p>
+      </article>
+      <article>
+        <h2>Ideal para compartir</h2>
+        <p>
+          Puedes subir esta carpeta a Vercel, Netlify, GitHub Pages o cualquier hosting estático.
+        </p>
+      </article>
+      <article>
+        <h2>Formato original</h2>
+        <p>
+          También se conserva el PDF descargable para impresión, archivo o distribución escolar.
+        </p>
+      </article>
+    </section>
+
+    <section id="lector" class="reader-section" aria-labelledby="reader-title">
+      <div class="section-heading">
+        <p class="eyebrow">Lector web</p>
+        <h2 id="reader-title">Lee el cuento completo</h2>
+        <p>Usa las flechas, los botones o el teclado para avanzar página por página.</p>
+      </div>
+
+      <div class="reader-toolbar" aria-label="Controles de lectura">
+        <button class="button button--ghost" type="button" id="prevPage">Anterior</button>
+        <label class="page-picker">
+          Página
+          <select id="pageSelect" aria-label="Seleccionar página del cuento"></select>
+        </label>
+        <button class="button button--ghost" type="button" id="nextPage">Siguiente</button>
+        <button class="button" type="button" id="toggleView">Modo continuo</button>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <span id="progressBar"></span>
+      </div>
+
+      <article class="book-reader" id="bookReader" aria-live="polite">
+        <p class="page-count" id="pageCount">Página 1 de 24</p>
+        <img id="currentPageImage" src="assets/pages/page-01.webp" alt="Página 1 del cuento" />
+      </article>
+
+      <div class="continuous-reader" id="continuousReader" hidden></div>
+    </section>
+
+    <section id="creditos" class="credits" aria-labelledby="credits-title">
+      <div>
+        <p class="eyebrow">Créditos</p>
+        <h2 id="credits-title">Sobre esta obra</h2>
+      </div>
+      <p>
+        Escrito e ilustrado por alumna de la Preparatoria n.º 23 “Jacob Nájera Hernández”, Estado de Guerrero, 2025. Todos los derechos reservados.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 · La Aventura de Destello y la Tormenta Solar</p>
+    <a href="#inicio">Volver arriba</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
